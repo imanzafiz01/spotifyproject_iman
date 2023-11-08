@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Spotifyproject</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+     body {
+        margin: 0px;
+    }
+     .container {
+      text-align: left;
+      margin-left: 10px;
+      margin-top: 30px;
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap; /* Allow cards to wrap to the next line */
+      justify-content: left; /* Center align cards within the container */
+    }
+    .card-container .card {
+      flex: 0 0 calc(23% - 20px); /* Set the width for each card (25% - margin) for 4 cards in a row */
+      margin: 20px; /* Add some margin for spacing */
+    }
+
+    .form-control {
+    margin-left: 20px;
+  }
+
+  .btn {
+    margin-right: 30px;
+  }
+  @media (max-width: 1080px) and (min-width: 769px) {
+      /* For screens less than 1080px but greater than or equal to 769px */
+      .card-container .card {
+        flex: 0 0 calc(25% - 20px); /* Set the width for each card for 4 cards in a row */
+        margin: 10px; /* Adjust the margin to match your design */
+      }
+      .form-control {
+    margin-left: 10px;
+  }
+
+  .container {
+      margin-left: 0px;
+    }
+
+  .btn {
+    margin-right: 10px;
+  }
+    }
+
+  @media (max-width: 768px) {
+  /* For screens smaller than 768px (typical mobile screens) */
+  .card-container .card {
+    flex: 0 0 calc(50% - 20px);
+    margin: 10px;
+  }
+  .d-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; /* Center both horizontally and vertically */
+  }
+  .container {
+      margin-left: 0px;
+    }
+
+  .form-control {
+     margin-left: 10px;
+     margin-right: 5px; /* Add spacing to the right of the search input */
+  }
+
+  .btn {
+    margin-left: 10px; /* Add spacing to the left of the search button */
+    margin-right: 5px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="my-4"></div>
+  <form class="d-flex">
+    <input class="form-control me-sm-2" type="search" placeholder="What do you want to listen to?">
+    <button class="btn my-2 my-sm-0" type="submit" style="background-color: #27856a">Search</button>
+  </form>
+  <div class="my-4"></div>
+  <div class="container">
+     <h4>Browse all</h4>
+   </div>
+  <div class="card-container">
+    <!-- Primary Cards -->
+    <a href="#" [routerLink]="['/search']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="card text-white" style="background-color: #27856a; text-decoration: none; position: relative;">
+     <div class="card-body" style="height: 230px;">
+          <h4 class="card-title">Podcast</h4>
+     </div>
+     <div class="image-frame" style="width: 100px; height: 100px; overflow: hidden; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);">
+          <img src="/assets/images/spotifypodcast.jpg" alt="Image Description" style="width: 100px; height: 92px; object-fit: cover;">
+     </div>
+    </a>
+    <a href="#" [routerLink]="['/search']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="card text-white" style="background-color: #1e3264; text-decoration: none; position: relative;">
+        <div class="card-body" style="height: 230px;">
+             <h4 class="card-title">Made For You</h4>
+        </div>
+        <div class="image-frame" style="width: 100px; height: 100px; overflow: hidden; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);">
+             <img src="/assets/images/madeforyou.jpg" alt="Image Description" style="width: 100px; height: 92px; object-fit: cover;">
+        </div>
+    </a>
+    <a href="#" [routerLink]="['/search']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="card text-white" style="background-color: #8d67ab; text-decoration: none; position: relative;">
+        <div class="card-body" style="height: 230px;">
+             <h4 class="card-title">Charts</h4>
+        </div>
+        <div class="image-frame" style="width: 100px; height: 100px; overflow: hidden; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);">
+             <img src="/assets/images/spotifycharts.jpg" alt="Image Description" style="width: 100px; height: 92px; object-fit: cover;">
+        </div>
+    </a>
+    <a href="#" [routerLink]="['/search']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="card text-white" style="background-color: #e8115b; text-decoration: none; position: relative;">
+        <div class="card-body" style="height: 230px;">
+             <h4 class="card-title">New Releases</h4>
+        </div>
+        <div class="image-frame" style="width: 100px; height: 100px; overflow: hidden; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);">
+             <img src="/assets/images/newreleases.jpg" alt="Image Description" style="width: 100px; height: 92px; object-fit: cover;">
+        </div>
+    </a>
+    <a href="#" [routerLink]="['/search']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="card text-white" style="background-color: #8d67ab; text-decoration: none; position: relative;">
+        <div class="card-body" style="height: 230px;">
+             <h4 class="card-title">Discover</h4>
+        </div>
+        <div class="image-frame" style="width: 100px; height: 100px; overflow: hidden; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);">
+             <img src="/assets/images/discover.jpg" alt="Image Description" style="width: 100px; height: 92px; object-fit: cover;">
+        </div>
+    </a>
+    <a href="#" [routerLink]="['/search']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="card text-white" style="background-color: #7358ff; text-decoration: none; position: relative;">
+        <div class="card-body" style="height: 230px;">
+             <h4 class="card-title">Live Events</h4>
+        </div>
+        <div class="image-frame" style="width: 100px; height: 100px; overflow: hidden; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);">
+             <img src="/assets/images/liveevents.jpg" alt="Image Description" style="width: 100px; height: 92px; object-fit: cover;">
+        </div>
+    </a>
+    <a href="#" [routerLink]="['/search']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="card text-white" style="background-color: #f037a5; text-decoration: none; position: relative;">
+        <div class="card-body" style="height: 230px;">
+             <h4 class="card-title">At Home</h4>
+        </div>
+        <div class="image-frame" style="width: 100px; height: 100px; overflow: hidden; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);">
+             <img src="/assets/images/athome.jpg" alt="Image Description" style="width: 100px; height: 92px; object-fit: cover;">
+        </div>
+    </a>
+    <a href="#" [routerLink]="['/search']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="card text-white" style="background-color: #7358ff; text-decoration: none; position: relative;">
+        <div class="card-body" style="height: 230px;">
+             <h4 class="card-title">Pop</h4>
+        </div>
+        <div class="image-frame" style="width: 100px; height: 100px; overflow: hidden; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);">
+             <img src="/assets/images/pop.jpg" alt="Image Description" style="width: 100px; height: 92px; object-fit: cover;">
+        </div>
+    </a>
+    <a href="#" [routerLink]="['/search']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="card text-white" style="background-color: #148a08; text-decoration: none; position: relative;">
+        <div class="card-body" style="height: 230px;">
+             <h4 class="card-title">K-Pop</h4>
+        </div>
+        <div class="image-frame" style="width: 100px; height: 100px; overflow: hidden; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);">
+             <img src="/assets/images/k-pop.jpg" alt="Image Description" style="width: 100px; height: 92px; object-fit: cover;">
+        </div>
+    </a>
+    <a href="#" [routerLink]="['/search']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="card text-white" style="background-color: #af2896; text-decoration: none; position: relative;">
+        <div class="card-body" style="height: 230px;">
+             <h4 class="card-title">Malay Pop</h4>
+        </div>
+        <div class="image-frame" style="width: 100px; height: 100px; overflow: hidden; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);">
+             <img src="/assets/images/malaypop.jpg" alt="Image Description" style="width: 100px; height: 92px; object-fit: cover;">
+        </div>
+    </a>
+    <a href="#" [routerLink]="['/search']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="card text-white" style="background-color: #1e3264; text-decoration: none; position: relative;">
+        <div class="card-body" style="height: 230px;">
+             <h4 class="card-title">Hip-Hop</h4>
+        </div>
+        <div class="image-frame" style="width: 100px; height: 100px; overflow: hidden; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);">
+             <img src="/assets/images/hiphop.jpg" alt="Image Description" style="width: 100px; height: 92px; object-fit: cover;">
+        </div>
+    </a>
+    
+  </div>
+</body>
+</html>

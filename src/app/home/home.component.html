@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Spotifyproject</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .container {
+      text-align: left;
+      margin-left: 10px;
+      margin-top: 30px;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: left;
+    }
+
+    .card {
+      flex: 0 0 calc(23% - 10px); /* Reduce margin to create less space */
+      margin: 10px; /* Reduce margin to create less space */
+      position: relative;
+      text-align: center;
+      text-decoration: none; /* Remove underline */
+      color: white; /* Change the default color to black */
+      background-color: #181818;
+    }
+
+    .card:hover {
+      background-color: #2C2C2C; /* Change the color when hovering */
+}
+
+    .card-container .card {
+      flex: 0 0 calc(23% - 20px); /* Set the width for each card (25% - margin) for 4 cards in a row */
+      margin: 20px; /* Add some margin for spacing */
+    }
+
+    .image-frame {
+      width: 100%;
+      padding: 10px; /* Reduce padding to create less space */
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-body {
+      margin-top: 5px; /* Reduce margin to create less space */
+    }
+
+    .card-title {
+      text-align: left;
+      padding: 0 5px; /* Reduce padding to create less space */
+    }
+
+    .card-description {
+      color: #a0a0a0;
+      text-align: left;
+      padding: 0 5px; /* Reduce padding to create less space */
+    }
+    @media (max-width: 1080px) and (min-width: 769px) {
+      /* For screens less than 1080px but greater than or equal to 769px */
+      .card-container .card {
+        flex: 0 0 calc(25% - 20px); /* Set the width for each card for 4 cards in a row */
+        margin: 10px; /* Adjust the margin to match your design */
+      }
+      .container {
+      margin-left: 0px;
+    }
+    }
+
+    @media (max-width: 768px) {
+      /* For screens smaller than 768px (typical mobile screens) */
+      .card-container {
+      display: flex;
+      flex-wrap: wrap; /* Allow cards to wrap to the next line */
+      justify-content: left; /* Center align cards within the container */
+      display: flex;
+  flex-wrap: nowrap; /* Prevent cards from wrapping to the next line */
+  justify-content: flex-start; /* Start cards from the left */
+  max-width: 100%; /* Set the maximum width for the container */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scrollbar-width: none; /* Hide scrollbar on Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar on Internet Explorer/Edge */
+    }
+
+    .card-description {
+        display: none;
+    }
+    .card-container .card {
+      flex: 0 0 calc(50% - 50px); /* Set the width for each card (25% - margin) for 4 cards in a row */
+      margin: 10px; /* Add some margin for spacing */
+    }
+      .container {
+      margin-left: 0px;
+    }
+    .card-container::-webkit-scrollbar {
+  width: 0; /* Hide scrollbar on Webkit (Safari, Chrome) */
+}
+    }
+  </style>
+</head>
+<body>
+  <div class="my-4"></div>
+  <div class="container">
+    <h4>Spotify Playlists</h4>
+  </div>
+  <div class="card-container">
+    <!-- Primary Cards -->
+    <a class="card" href="#" [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">
+      <div class="image-frame">
+        <img src="/assets/images/today_hits.jpg" alt="Image Description">
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Today's Top Hits</h4>
+        <p class="card-description">Listen to today's top hits.</p>
+      </div>
+    </a>
+    <a class="card" href="#" [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">
+      <div class="image-frame">
+        <img src="/assets/images/rapcaviar.jpg" alt="Image Description">
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">RapCaviar</h4>
+        <p class="card-description">New music from hits Rapper.</p>
+      </div>
+    </a>
+    <a class="card" href="#" [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">
+      <div class="image-frame">
+        <img src="/assets/images/allout2010.jpg" alt="Image Description">
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">All out 2010s</h4>
+        <p class="card-description">The biggest songs of 2010s.</p>
+      </div>
+    </a>
+    <a class="card" href="#" [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">
+      <div class="image-frame">
+        <img src="/assets/images/rockclassic.jpg" alt="Image Description">
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Rock Classics</h4>
+        <p class="card-description">Rock legends & classics.</p>
+      </div>
+    </a>
+    <a class="card" href="#" [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">
+      <div class="image-frame">
+        <img src="/assets/images/chillhits.jpg" alt="Image Description">
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Chill Hits</h4>
+        <p class="card-description">Kick back to the best new and recent chill hits.</p>
+      </div>
+    </a>
+    <a class="card" href="#" [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">
+      <div class="image-frame">
+        <img src="/assets/images/vivalatino.jpg" alt="Image Description">
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Viva Latino</h4>
+        <p class="card-description">Today's top Latin hits.</p>
+      </div>
+    </a>
+    <a class="card" href="#" [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">
+      <div class="image-frame">
+        <img src="/assets/images/megahitmix.jpg" alt="Image Description">
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Mega Hit Mix</h4>
+        <p class="card-description">A mega mix of 75 favorites from the last few years!</p>
+      </div>
+    </a>
+    <a class="card" href="#" [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">
+      <div class="image-frame">
+        <img src="/assets/images/allout80.jpg" alt="Image Description">
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">All Out 80s</h4>
+        <p class="card-description">The biggest songs of the 1980s.</p>
+      </div>
+    </a>
+    <!-- Add more cards here -->
+  </div>
+</body>
+</html>
